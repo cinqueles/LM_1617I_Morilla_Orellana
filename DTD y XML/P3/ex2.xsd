@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="libreria">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="libro" minOccurs="1" maxOccurs="unbounded" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="libro">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="titulo" />
+        <xsd:element ref="autor" minOccurs="1" maxOccurs="unbounded" />
+        <xsd:element ref="year" />
+        <xsd:element ref="editorial" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="titulo" type="xsd:string" />
+  <xsd:element name="autor" type="xsd:string" />
+  <xsd:element name="year" type="xsd:decimal" />
+  <xsd:element name="editorial" type="xsd:string" />
+</xsd:schema>

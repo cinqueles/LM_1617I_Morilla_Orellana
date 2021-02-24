@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catenemontuose SYSTEM "ex3.dtd">
+<catenemontuose>
+  <catenamontuosa>
+    <monte>
+      <nome>Picos de Bañuela</nome>
+      <regione>Andalucia</regione>
+      <altezza unitamisura="metros">1324</altezza>
+    </monte>
+    <monte>
+	    <nome>Corral de borros</nome>
+      <regione>Andalucia</regione>
+      <altezza unitamisura="metros">1312</altezza>
+    </monte>
+  </catenamontuosa>
+</catenemontuose>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="club">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="member" minOccurs="1" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="member">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element ref="name" />
+          <xsd:element ref="phone" />
+          <xsd:element ref="years-membership" />
+          <xsd:element ref="email" />
+        </xsd:sequence>
+      </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="name" type="xsd:string" />
+  <xsd:element name="phone" type="xsd:decimal" />
+  <xsd:element name="years-membership" type="xsd:decimal" />
+  <xsd:element name="email" type="xsd:string" />
+</xsd:schema>
