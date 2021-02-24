@@ -1,0 +1,73 @@
+#acordeon {
+    width: 600px;
+    margin: 10px auto;
+    border-radius: 20px;
+    border: 2px solid black;
+    overflow-y: auto;
+
+    /*background-color: #A9E2F3;*/
+}
+
+.visible {
+  margin-left: 20%;
+  background-color: blue;
+  width: 350px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.visible img {
+  width: 65px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.visible p {
+  float: right;
+  margin-right: 12%;
+  color: white;
+  margin-top: 10%;
+  font-size: 25px;
+
+}
+
+.oculto {
+  background-color: red;
+  width: 350px;
+  height: 160px;
+  margin-left: 20%;
+
+}
+
+.oculto img {
+  width: 115px;
+  margin-left: 5%;
+  margin-top: 10px;
+  float: left;
+  margin-right: 20px;
+
+}
+
+.oculto p {
+  /* font-size: 15px;
+  color: white;
+  width: 50%;
+  float: right;
+  margin-top: -30%;
+  margin-right: 4%;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:white;
+}
+
+.largo p{
+  font-size: 15px;
+  color: white;
+  width: 50%;
+  float: right;
+  margin-top: -30%;
+  margin-right: 4%;
+}
+.dentro{
+  background-color: orange;
+}

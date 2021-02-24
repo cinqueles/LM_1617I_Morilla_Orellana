@@ -1,0 +1,58 @@
+<!--
+    Author: Ismael Morilla
+    Description: animate
+    Date: Enero 2017
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+  <link rel="stylesheet" href="./each_example1.css">
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+		<h1>ANIMETE EXAMPLE</h1>
+		<br>
+	<input type="button" value="<">
+	<input type="button" value=">">
+	<input type="button" value="^">
+	<input type="button" value="v">
+
+	<div id="container">
+		<div id="movil">
+
+		</div>
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("input[value='<']").on("click",function(){
+				$("div#movil").animate({
+					left : "-=50px"
+				},1000);
+			});
+			$("input[value='>']").on("click",function(){
+				$("div#movil").animate({
+					left : "+=50px"
+				},1000);
+			});
+			$("input[value='^']").on("click",function(){
+				$("div#movil").animate({
+					top : "-=50px"
+				},1000);
+			});
+				$("input[value='v']").on("click",function(){
+					$("div#movil").animate({
+						top : "+=50px"
+					},1000);
+				});
+	  });
+	</script>
+
+</body>
+</html>

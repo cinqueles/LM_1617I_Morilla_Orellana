@@ -1,0 +1,22 @@
+#contenedor{
+  width: 800px;
+  height: 500px;
+  margin: 0px auto;
+  position: relative;
+  border: 1px solid black;
+}
+
+#movil{
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 375px;
+  top: 225px;
+}
+
+#barra{
+  width: 400px;
+  background-color: green;
+  height:
+}
