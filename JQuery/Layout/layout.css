@@ -1,0 +1,111 @@
+*{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*estilos del div general */
+#container {
+  margin: 0px auto;
+  width: 800px;
+  overflow-y: auto;
+  position:relative;
+}
+/*Estilos del div que divide cabecera*/
+#cabecera {
+  background-color: #4dc1ee;
+  overflow-y: auto;
+  position: relative;
+  height: 425px;
+
+}
+
+/*Para texto con tamaño grande y sin margen*/
+#sin {
+  margin: 0px;
+  font-size: 30px;
+}
+/*Estilos para el botón GET STARTED*/
+#menu{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  background-color: #0099cd;
+  margin: 7px 2px;
+  padding: 16px 54px;
+  border: 1px solid #0099cd;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/*Texto del titulo de la izquierda de la imagen*/
+#texto{
+
+  margin-left: 10%;
+  margin-top: 10%;
+  margin-right: 60%;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*Texto pequeño de la cabecera*/
+#titulo{
+  font-size: 15px;
+  margin: 2px;
+  font-weight: bold;
+}
+/*Estilo para el cuadrado chico de la cabecera*/
+#cuadrado{
+  position: absolute;
+  right: 100px;
+  left: 610px;
+  top: 25px;
+}
+
+/*Estilo de la imagen de la tablet*/
+#imagen{
+  position: absolute;
+  top:50px;
+  right: 140px;
+}
+
+.caja img {
+  width: 70px;
+  height: 70px;
+}
+
+/*Estilos que divide el div cuerpo*/
+#cuerpo {
+  overflow-y: auto;
+}
+
+/*Estilos para la división de las imagenes y el texto*/
+.caja {
+  display: inline-block;
+  width: 19%;
+  overflow-y: auto;
+  margin: 2em;
+  text-align: center;
+}
+/*Este estilo es para el primer parrafo*/
+.parrafo {
+  display: inline-block;
+  width: 19%;
+  margin: 2em;
+  text-align: center;
+  color: grey;
+  height: 170px;
+}
+
+/*Estilo aplicable al parrafo que se encuentra debajo de las imagenes*/
+#tabla{
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+/* Titulo de los parrafos de debajo de las imagenes*/
+.ptitulo{
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 15px;
+  margin: 3px;
+}
