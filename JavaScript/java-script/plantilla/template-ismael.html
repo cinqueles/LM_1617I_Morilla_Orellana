@@ -1,0 +1,67 @@
+<!--
+    Author: Ismael Morilla
+    Description: JavaScript Ejemplos
+    Date: Enero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1 id="texto">JavaScript Template</h1>
+	<form id="fom1"
+		<label>Valor a tratar</label>
+		<input type="text" id="valor">
+		<input type="button" value="comprobar">
+	</form>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+			/*var v= [1,"HOLA", "ADIOS", 2];*/
+			$("input[type='button']").click(function(event){
+				/*parseInt convierte de cadena a entero*/
+				var valor = parseInt($("#valor").val());
+				if (valor<10){
+					alert("Es menor");
+				} else if(valor > 10){
+					alert("Es mayor");
+				} else{
+					alert("Es igual");
+				}
+			});
+
+
+
+/*
+			var h="4";
+			var n=3;
+			var y=5;
+			cnsole.log(h+n+y);
+
+
+			Variables
+			variable n con valor
+			var n=0;
+			console.log(n);
+			var texto="Mensaje desde variable"
+			document.getElementById("texto").innerHTML=texto;
+				alert("HOLA");
+				$("#texto").html("nuevo texto");
+				alert("hola otra vez");
+				document.getElementById("texto").innerHTML="Nuevo texto 2";
+*/
+
+	  });
+	</script>
+
+</body>
+</html>

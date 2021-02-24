@@ -1,0 +1,8 @@
+
+// sinstasis
+function Nombre(lista de parametros){
+
+  return;
+}
+
+//ejemplo de funciones

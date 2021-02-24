@@ -1,0 +1,41 @@
+<!--
+    Author: Ismael Morilla
+    Description: JavaScript Ejemplos
+    Date: Enero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eventos basic</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1 id="texto">Eventos</h1>
+	<h2>TIPO MANEJADOR</h2>
+	<h3 id="resultado"></h3>
+	<input type="button" value="jquery">
+
+		<input type="button" value="javaScript" onclick="myFunction(event)">
+
+
+	<script>
+		function myFunction(event){
+			document.getElementById("resultado").innerHTML="EVENTO CAPTURADO CON JAVASCRIPT";
+		}
+		
+	  $(function() {
+			$("input[value='jquery']").click(function(event){
+				$("#resultado").html("EVENTO CAPTURADO JQUERY");
+			});
+
+	  });
+	</script>
+
+</body>
+</html>

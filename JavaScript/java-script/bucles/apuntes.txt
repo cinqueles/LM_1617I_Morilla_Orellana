@@ -1,0 +1,4 @@
+for(i=0;i<100;i++){}
+i=0 --> inicialización
+i<100 --> condición para seguir el for
+i++ --> incremento

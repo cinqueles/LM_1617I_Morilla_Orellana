@@ -1,0 +1,44 @@
+//definicion vector vacío
+var v=[];
+
+//definicion de vector lleno
+var v1=[54,75,"H",100];
+
+
+//longitud del vector
+v.length
+v1.length
+
+//acceso a los elementos del vector
+v1[0];
+v1[1];
+v1[2];
+v1[3];
+
+//añadir elementos al vector
+var cars=["saab","Volvo","BMW"]; total longitud 3
+
+cars[cars.length]="SEAT"; es lo mismo que si pusieramos cars[3]="SEAT";
+
+//otra forma de añadir elementos al vector sería
+cars.push("SEAT"); #lo añade como último elemento
+
+// modificar el nombre del vector
+nombreVector[nºposicion]="nombreNuevo";
+
+// modificar un elemento de una posicion concreta
+fruits[1]="KIWI";
+
+//para eliminar el último elemento del vector
+vector.pop();
+
+// Recorrer vector
+la estructura mas recomendable es un for
+ejemplo:
+
+  for(i=0;i<v.length;i++){
+    console.log(v[i]); #mostrar por consola todos los elementos del vector de uno en uno
+    #mostrar los elementos del vector en una lista
+    $("#lista").append("<li>"+
+                        v[i]+"</li>");
+  }

@@ -1,0 +1,13 @@
+1)html/css
+cuadro centrado tamaño: 800*400
+borde: 10px black
+contenedor: 780
+p con Puntuación X
+
+2) setintervar
+
+llamando a la funcion updatepos(),X
+
+utilizar la funcion math.random donde calculará la X y la Y donde sea dentro del rango 10 y 730  e y 10 y 340
+
+crear un manejador de click del elemento padre  para saber si hago clic en el cuadro del div hijo

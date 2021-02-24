@@ -1,0 +1,65 @@
+<!--
+    Author: Ismael Morilla
+    Description: javaScript Ejemplos
+    Date: Abril 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="resultado">
+
+	<h1 id="texto">JavaScript bucles</h1>
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+				var vector = ["a","b","c","d","e"];
+				var v2 = [1,2,3,4,5,6,7,8,9];
+				// bucle con, for
+				document.getElementById("resultado").innerHTML="<ul>";
+				for(i=0;i<vector.length;i++){
+					document.getElementById("resultado").innerHTML+="<li>"+vector[i]+"</li>";
+				}
+				document.getElementById("resultado").innerHTML+="<ul>";
+
+				//bucle con while
+				var contador=0;
+				document.getElementById("resultado").innerHTML+="<ul>";
+				while (contador<v2.length) {
+					document.getElementById("resultado").innerHTML+="<li>"+v2[contador]+"</li>";
+					contador++;
+				}
+				document.getElementById("resultado").innerHTML+="<ul>";
+
+				//Con jquery
+				var vector = ["a","b","c","d","e"];
+				var v2 = [1,2,3,4,5,6,7,8,9];
+				// bucle con for
+				$("#resultado").html="<ul>";
+				for(i=0;i<vector.length;i++){
+					$("#resultado").append("<li>"+vector[i]+"</li>");
+				}
+				$("#resultado").append("<ul>");
+
+				//bucle con while
+				var contador=0;
+				$("#resultado").append("<ul>");
+				while (contador<v2.length) {
+					$("#resultado").append("<li>"+v2[contador]+"</li>");
+					contador++;
+				}
+				$("#resultado").append("<ul>");
+			});
+	</script>
+
+</body>
+</html>

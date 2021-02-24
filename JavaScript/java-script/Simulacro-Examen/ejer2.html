@@ -1,0 +1,67 @@
+<!--
+    Author: Ismael Morilla
+    Description: JavaScript Ejemplos
+    Date: Emayo 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 2</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>AÑADE ELEMENTO AL VECTOR</h1>
+			<label>ELEMENTO A AÑADIR</label>
+			<input id="valor" type="text" value="Inserta elemento">
+	<table>
+		<tr>
+			<td><input type="button" value="Añadir a vector"></td>
+			<td><input type="button" value="Mostrar vector"></td>
+			<td><input type="button" value="Vaciar vector"></td>
+		</tr>
+	</table>
+	<ul id="lista">
+
+	</ul>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+			var v=[];
+			$("input[value='Añadir a vector']").click(function(){
+				var valor = $("#valor").val();
+				v[v.length]=valor;
+				console.log(v);
+			});
+
+
+			$("input[value='Mostrar vector']").click(function(){
+				$("ul").empty();
+				if(v.length == 0){
+					alert("Vector vacío");
+				} else {
+					for(i=0;i<v.length;i++){
+	    		console.log(v[i]);
+	    		$("#lista").append("<li>"+
+	                        v[i]+"</li>");
+	  			}
+				}
+			});
+
+			$("input[value='Vaciar vector']").click(function(){
+			 v=[];
+			 $("ul").empty();
+			 alert("Vector vacío");
+			});
+
+	  });
+	</script>
+
+</body>
+</html>

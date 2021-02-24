@@ -1,0 +1,20 @@
+*{
+  box-sizing: border-box;
+}
+
+table{
+  margin: auto;
+  align: center;
+}
+#botones{
+  width: 100px;
+  height: 40px;
+}
+
+td {
+  font-size: 20px;
+}
+
+input{
+  height: 30px;
+}

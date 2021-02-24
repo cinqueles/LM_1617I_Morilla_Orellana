@@ -1,0 +1,67 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery Ejemplos
+    Date: Mayo 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adivina numero</title>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Adivina el numero</h1>
+	<div id="sms">
+
+	</div>
+	<div id="resultado">
+		<h3>RESULTADO</h3>
+	</div>
+	<input type="button" name="" value="Comenzar">
+	<p id="no"></p>
+	<script>
+	  $(function() {
+			var intentos=1;
+			var encontrado=false;
+
+			$("#no").text("Nº Intentos: "+intentos);
+
+			var ale=Math.trunc((Math.random()*100));
+			console.log(ale);
+
+			$("input[value='Comenzar']").click(function(){
+				while (encontrado==false && intentos<=5) {
+					var num = parseInt(prompt("Introduce un número"));
+					if(num > ale){
+								$("#sms").append("<p>El numero a adivinar es menor</p>");
+								alert("El numero a adivinar es menor - INTENTOS: "+intentos);
+					}else if (num < ale) {
+							$("#sms").append("<p>El numero a adivinar es mayor</p>");
+							alert("El numero a adivinar es mayor - INTENTOS: "+intentos);
+					} else if (num=ale){
+						$("#sms").append("<p>Has acertado el numero es: </p>");
+						$("#sms").append(ale);
+						$("#resultado").append("<p>Has ganado!!</p>");
+						alert("Has acertado!!");
+
+
+						encontrado=true;
+					}else{
+						$("#resultado").append("<p>Has perdido</p>");
+						$("#sms").append("<p>El numero era: </p>");
+						$("#sms").append(ale);
+					}
+					intentos=intentos+1;
+					$("#no").text("Nº Intentos: "+intentos);
+
+				}
+			});
+	  });
+	</script>
+
+</body>
+</html>

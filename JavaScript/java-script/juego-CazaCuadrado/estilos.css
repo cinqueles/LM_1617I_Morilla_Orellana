@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+}
+
+#padre{
+  width: 800px;
+  height: 400px;
+  border: 10px solid black;
+  position: relative;
+  background-color: white;
+}
+
+#go{
+  width: 800px;
+  height: 400px;
+  /*border: 10px solid black;*/
+  position: absolute;
+  /*background-color: white;*/
+}
+
+#cuad{
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+
+}
+
+body{
+   margin: 5% 20%;
+   background-color: #E0ECF8;
+   /*background-image: url(fondo.jpg);
+   background-repeat: no-repeat;
+   background-size: 50%;*/
+
+
+ }
+
+h2 {
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+input{
+  width: 100px;
+  height: 30px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+table{
+  margin: auto;
+  border-spacing: 30px 5px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+h1{
+  text-align: center;
+  margin: auto;
+  color: red;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+img#gameover{
+  position: absolute;
+  top:30%;
+  left: 9%;
+}
+
+img#stop{
+  width: 25%;
+  height: 50%;
+  position: absolute;
+  top:25%;
+  left: 40%;
+}
+img#uno,#dos,#tres{
+  width: 40px;
+  height: 40px;
+}
+
+img#mata{
+  width: 80px;
+  height: 40px;
+}

@@ -1,0 +1,186 @@
+<!--
+    Author: Ismael Morilla
+    Description: JUEGO DE LA CAZA DEL CUADRADO
+    Date: abril 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<table>
+		<tr>
+			<td><h3 id="punt"></h3></td>
+			<td><h3>Vidas:</h3></td>
+			<td><img src="3.png" id="uno" alt="1"></td>
+			<td><img src="3.png" id="dos" alt="2"></td>
+			<td><img src="3.png" id="tres" alt="3"></td>
+		</tr>
+	</table>
+	<div id="padre">
+		<div id="go"></div>
+		<div id="cuad"></div>
+		<h2>Pulsa el cuadro rojo para empezar</h2>
+		<img src="game.png" id="gameover">
+		<img src="stop.png" id="stop">
+	</div>
+<table>
+		<tr>
+			<td><input type="button"  value="Pausa"></td>
+			<td><input type="button"  value="Reanudar"></td>
+			<td><input type="button"  value="Reset"></td>
+		</tr>
+</table>
+
+	<script>
+	  $(function() {
+			var cont=0;
+			var game=3;
+			var x=$("#cuad").css("left");
+			var y=$("#cuad").css("top");
+			var velocidad=1500;
+			$("#gameover").hide();
+			$("#stop").hide();
+			$("input[value='Reanudar']").hide();
+
+			$("#punt").text("Puntuación: "+cont);
+
+			$("#cuad").click(function(){
+				$("h2").empty();
+			});
+
+			function updatepos(){
+				var x=Math.trunc((Math.random()*730) );
+				var y=Math.trunc((Math.random()*330));
+				document.getElementById("cuad").style.top= y +"px";
+				document.getElementById("cuad").style.left= x +"px";
+			}
+
+			var tempo=setInterval(updatepos,velocidad);
+
+			$("#cuad").click(function(){
+					cont=cont+1;
+					$("#punt").text("Puntuación: "+cont);
+					if (cont%10==0) {
+						clearInterval(tempo);
+						velocidad=velocidad-200;
+						tempo=setInterval(updatepos,velocidad);
+						console.log(velocidad);
+					} else if (cont%20==0) {
+					    clearInterval(tempo);
+					    velocidad=velocidad-200;
+					    tempo=setInterval(updatepos,velocidad);
+					    console.log(velocidad);
+					} else if (cont%30==0) {
+					    clearInterval(tempo);
+					    velocidad=velocidad-200;
+					    tempo=setInterval(updatepos,velocidad);
+					    console.log(velocidad);
+					}else if (cont%40==0) {
+					    velocidad=velocidad-200;
+					    clearInterval(tempo);
+					    tempo=setInterval(updatepos,velocidad);
+					    console.log(velocidad);
+					}else if (cont%50==0) {
+					    velocidad=velocidad-200;
+					    clearInterval(tempo);
+					    tempo=setInterval(updatepos,velocidad);
+					    console.log(velocidad);
+					}	else if (cont%60==0) {
+					    velocidad=velocidad-200;
+					    clearInterval(tempo);
+					    tempo=setInterval(updatepos,velocidad);
+					    console.log(velocidad);
+					}
+			});
+
+			//GAME OVER
+			$("#go").click(function(){
+				game=game-1;
+				if (game%3==0) {
+					$("#cuad").hide();
+					$("#gameover").show();
+					$("#uno").attr('src','0.png');
+					$("body").css({"background-color":"#F5A9A9"});
+					//alert("Puntuacion optenida: " +cont );
+					$("input[value='Reanudar']").hide();
+					$("input[value='Pausa']").hide();
+				} else if (game%3<0) {
+					$("#error").text("Vidas: 0");
+					game=0;
+				} else {
+					$("#error").text("Vidas: "+game);
+				}
+				if (game==2) {
+					$("#tres").hide();
+					$("#dos").attr('src','2.png');
+					$("#uno").attr('src','2.png');
+					$("body").css({"background-color":"#CEF6CE"});
+				}else if (game==1) {
+					$("#dos").hide();
+					$("#uno").attr('src','1.png');
+					$("body").css({"background-color":"#F5DA81"});
+				}
+			});
+			// PAUSAR EL JUEGO
+			$("input[value='Pausa']").click(function(){
+				clearInterval(tempo);
+				$("#cuad").hide();
+				$("input[value='Reanudar']").show();
+				$("input[value='Pausa']").hide();
+				$("#stop").show();
+				$("#go").hide();
+				/*if(game==0){
+					$("#stop").hide();
+				}else {
+					$("#stop").show();
+					//$("h2").empty();
+				}*/
+			});
+
+			// REANUDAR EL JUEGO
+			$("input[value='Reanudar']").click(function(){
+				tempo=setInterval(updatepos,velocidad);
+				$("#cuad").show();
+				$("#stop").hide();
+				$("input[value='Reanudar']").hide();
+				$("input[value='Pausa']").show();
+				$("#go").show();
+				/*if(game==0){
+					$("#cuad").hide();
+				}else {
+					$("#cuad").show();
+					$("#stop").hide();
+				}*/
+			});
+
+
+			//REINICIAR EL CONTADOR Y LA VELOCIDAD
+			$("input[value='Reset']").click(function(){
+				/*var cont=0;
+				$("#punt").text("Puntuación: "+cont);
+				var game=3;
+				$("#error").text("Errores: "+game);
+				velocidad=2000;
+				clearInterval(tempo);
+				tempo=setInterval(updatepos,velocidad);
+				console.log(velocidad);
+				$("#cuad").show();
+				$("#cuad").css({"background-color":"red"});
+				$("h1").remove();
+				$("#gameover").hide();*/
+				location.reload();
+			});
+
+	});
+	</script>
+
+</body>
+</html>

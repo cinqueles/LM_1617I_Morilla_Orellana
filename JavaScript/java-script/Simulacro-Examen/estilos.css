@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+#contar{
+  float: right;
+  margin-right: 65%;
+}
+
+#text{
+  width: 17%;
+}
+
+#resultado{
+  margin-top: 20px;
+}

@@ -1,0 +1,80 @@
+<!--
+    Author: Ismael Morilla
+    Description: javaScript Calculadora
+    Date: Abril 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vectores JavaScript</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1 id="texto">Añadir y mostrar vectores</h1>
+	<form id="fom1">
+		<table>
+			<tbody>
+				<tr>
+					<td><label>Añadir Elemento</label></td>
+					<td><input type="text" id="num1"></td>
+					<td><input type="button" value="Añadir" id="botones"></td>
+					<td></td>
+					<td></td>
+					<td  rowspan="2"><h3></h3></td>
+
+				</tr>
+				<tr>
+					<td><input type="button" value="Mostrar" id="botones"></td>
+					<td></td>
+					<td><input type="button" value="Quitar" id="botones"></td>
+
+				</tr>
+				<tr>
+
+				</tr>
+				<tr>
+					<td colspan="4"><ul id="lista">
+
+					</ul></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+
+	<script>
+	  $(function() {
+			var vec=[];
+			$("h3").text("Hay "+vec.length+" elementos");
+
+			$("input[value='Añadir']").click(function(){
+				var cont=$("input[type='text']").val();
+				vec.push(cont);
+				$("h3").text("Hay "+vec.length+" elementos");
+			});
+
+			$("input[value='Mostrar']").click(function(){
+				$("#lista").empty();
+				for(i=0;i<vec.length;i++){
+					$("#lista").append("<li>"+
+			                        vec[i]+"</li>");
+				}
+
+			});
+			$("input[value='Quitar']").click(function(){
+				var cont=$("input[type='text']").val();
+				vec.pop();
+				$("h3").text("Hay "+vec.length+" elementos");
+				console.log(vec);
+				//$("#lista").empty();
+			});
+	  });
+	</script>
+
+</body>
+</html>

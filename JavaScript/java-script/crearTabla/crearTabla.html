@@ -1,0 +1,58 @@
+<!--
+    Author: Ismael Morilla
+    Description: JavaScript Ejemplos
+    Date: Enero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1 id="texto">Crear Tabla</h1>
+	<form id="fom1"
+		<label>Numero columnas</label>
+		<input type="text" id="colum"><br><br>
+		<label>Numero filas</label>
+		<input type="text" id="fil"><br><br>
+		<input type="button" value="Crear" id="botones">
+		<input type="button" value="Borrar" id="botones">
+	</form><br>
+
+	<script>
+	  $(function() {
+			// Boton para crear tabla
+			$("input[value=Crear]").click(function(event){
+				var ncol = parseInt($("#colum").val());
+				var nfil = parseInt($("#fil").val());
+				var cont=0;
+				texto="<table border=1px>";
+				for(i=0;i<nfil;i++){
+					texto+="<tr>";
+					for(a=0;a<ncol;a++){
+            texto+="<td>"+(cont++)+"</td>";
+					}
+						texto+="</tr>";
+				}
+				texto+="</table>";
+				$("body").append(texto);
+			});
+
+			// boton para borrar tabla
+			$("input[value=Borrar]").click(function(){
+				$("table").remove();
+			});
+
+	  });
+
+	</script>
+
+</body>
+</html>

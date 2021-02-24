@@ -1,0 +1,56 @@
+<!--
+    Author: Ismael Morilla
+    Description: JavaScript Ejemplos
+    Date: mayo 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 1</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>LENGUAJE DE MARCAS - JAVASCRIPT</h1>
+					<textarea rows="10" cols="30"></textarea>
+					<input type="button" value="CONTAR">
+					<b id="contar">0 PALABRAS</b><br><br>
+					<input type="text" id="text"> <input type="button" value="BUSCAR">
+			<h3 id="resultado"></h3>
+
+
+	<script>
+	  $(function() {
+			$("input[value='CONTAR']").click(function(){
+				var text=$("textarea").val().split(" ");
+				var cuenta=text.length;
+				$("#contar").text(cuenta+" PALABRAS");
+			});
+
+			$("input[value='BUSCAR']").click(function(){
+				var buscar=$("#text").val();
+				var text=$("textarea").val();
+				var v=text.split(" ");
+				$("#resultado").html(" ");
+				for (i=0; i< v.length;i++) {
+
+					if (buscar==v[i]) {
+						$("#resultado").append(
+							"<span style='background-color:red' >"+v[i]+" </span>");
+					} else {
+						$("#resultado").append(v[i]+" ");
+					}
+				}
+
+			});
+
+	  });
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery Ejemplos
+    Date: Abril 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1 id="texto">Comparar numeros</h1>
+	<form id="fom1"
+		<label>Numero 1</label>
+		<input type="text" id="valor"><br>
+		<label>Numero 2</label>
+		<input type="text" id="valor1"><br>
+		<input type="button" value="comprobar">
+	</form>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+
+			$("input[type='button']").click(function(event){
+				/*parseInt convierte de cadena a entero*/
+				var valor = parseInt($("#valor").val());
+				var valor1 = parseInt($("#valor1").val());
+				if (valor<valor1){
+					alert("El numero "+valor+" es menor que "+valor1);
+				} else if(valor > valor1){
+					alert("El numero "+ valor+ " es mayor que "+ valor1);
+				} else{
+					alert("El numero " + valor+ " es igual a "+valor1);
+				}
+			});
+
+	  });
+	</script>
+
+</body>
+</html>
