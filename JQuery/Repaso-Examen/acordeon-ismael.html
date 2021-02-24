@@ -1,0 +1,104 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery Ejemplos
+    Date: Enero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="acordeon.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="container">
+	<div class="general">
+		<div class="visible">
+			<img src="Vengadores.png" alt="icono" />
+			<p>Iron Man
+		</div>
+		<div class="oculto">
+			<img src="Iron-Man.png" alt="ironman" />
+			<p class="parrafo">
+				Stark es un exitoso
+				multimillonario, empresario
+				e ingeniero, con una lujosa vida
+				y una enorme fortuna gracias a sus inventos
+				y a la herencia de su padre
+			</p>
+		</div>
+	</div>
+	<div class="general">
+		<div class="visible">
+			<img src="Vengadores.png" alt="icono" />
+			<p>Hulk
+		</div>
+		<div class="oculto">
+			<img src="hulk.ico" alt="" />
+			<p>
+				Hulk es un superhéroe verde
+				que aparece en los cómics estadounidenses
+				publicados por la editorial Marvel Cómics.
+			</p>
+		</div>
+	</div>
+	<div class="general">
+		<div class="visible">
+			<img src="Vengadores.png" alt="icono" />
+			<p>Thor
+		</div>
+		<div class="oculto">
+			<img src="Thor.ico" alt="" />
+			<p>
+				Es el dios del trueno
+				en la mitología nórdica y germánica.
+			</p>
+		</div>
+	</div>
+  <div class="general">
+		<div class="visible">
+			<img src="Vengadores.png" alt="icono" />
+			<p>Capitan America
+		</div>
+		<div class="oculto">
+				<img src="captain-america.ico" alt="" />
+				<p>
+					el primer vengador inició como un concepto en 1997
+					y Artisan Entertainment iba a distribuirla.
+				</p>
+		</div>
+	</div>
+	<div class="genaral">
+		<div class="visible">
+			<img src="Vengadores.png" alt="icono" />
+			<p>Black Widow
+		</div>
+		<div class="oculto">
+			<img src="black-widow.ico" alt="" />
+			<p>
+				Natasha Romanoff, que ya abandonó el grupo,
+				para ejercer de agente de inteligencia y espionaje
+				en organizaciones como S.H.I.E.L.D.
+			</p>
+		</div>
+	</div>
+</div>
+
+	<script>
+	  	  $(function() {
+					$("#menu div div:last-child").hide();
+					$("#menu div div:first-child").click(function(){
+							$(this).next().animate({
+								height:"show"},1000);
+							$(this).parent().siblings().children().next().hide();
+							});
+				});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery Ejemplos
+    Date: Enero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>jQuery Template</h1>
+
+	<div id="bloque">
+
+	</div>
+	<input type="button" id="grow" value="Crecer">
+	<input type="button" id="shrink" value="Disminuir">
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+				$("#bloque").css({"width":"500px","height":"150px", "background-color":"red"});
+				$("#grow").on("click",function(){
+					$("#bloque").css("width","+=25");
+				});
+
+				$("#shrink").on("click",function(){
+					$("#bloque").css("width","-=25");
+				});
+
+	  });
+	</script>
+
+</body>
+</html>

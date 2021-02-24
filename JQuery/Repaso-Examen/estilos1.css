@@ -1,0 +1,253 @@
+/* Estilos del menu*/
+#menu{
+  width: 100%;
+  overflow: auto;
+}
+
+nav, div {
+  box-sizing: border-box;
+}
+
+.nivel1 {
+  float: left;
+  width: 18%;
+  border: 1px solid black;
+  text-align: center;
+  background-color: #E0F2F7;
+  position: relative;
+}
+
+.nivel2{
+  border: 1px solid black;
+  background-color: #F6CEF5;
+}
+.nivel3{
+  background-color: #CEF6CE;
+  border: 1px solid black;
+  width: 50%;
+  top: 20%;
+  float: left;
+}
+
+
+.nivel2 > nav {
+  position: absolute;
+  width: 300px;
+  top: 20%;
+  left: 100%;
+}
+
+.nivel2-1{
+  border: 1px solid black;
+  background-color: #F6CEF5;
+}
+
+.nivel2-1 > nav {
+  position: absolute;
+  width: 300px;
+  top: 40%;
+  left: 100%;
+}
+.nivel3-1{
+  background-color: #CEF6CE;
+  border: 1px solid black;
+  width: 50%;
+  top: 20%;
+  float: left;
+}
+
+.nivel2-2{
+  border: 1px solid black;
+  background-color: #F6CEF5;
+}
+
+.nivel2-2 > nav {
+  position: absolute;
+  width: 300px;
+  top: 60%;
+  left: 100%;
+}
+.nivel3-2{
+  background-color: #CEF6CE;
+  border: 1px solid black;
+  width: 50%;
+  top: 20%;
+  float: left;
+}
+
+.nivel2-3{
+  border: 1px solid black;
+  background-color: #F6CEF5;
+}
+
+.nivel2-3 > nav {
+  position: absolute;
+  width: 300px;
+  top: 80%;
+  left: 100%;
+}
+.nivel3-3{
+  background-color: #CEF6CE;
+  border: 1px solid black;
+  width: 50%;
+  top: 20%;
+  float: left;
+}
+
+/*Estilos del acordeon*/
+#acordeon {
+    width: 600px;
+    margin: 10px auto;
+    border-radius: 20px;
+    border: 2px solid black;
+    overflow-y: auto;
+
+    /*background-color: #A9E2F3;*/
+}
+
+.visible {
+  margin-left: 20%;
+  background-color: blue;
+  width: 350px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.visible img {
+  width: 65px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.visible p {
+  float: right;
+  margin-right: 12%;
+  color: white;
+  margin-top: 10%;
+  font-size: 25px;
+
+}
+
+.oculto {
+  background-color: red;
+  width: 350px;
+  height: 160px;
+  margin-left: 20%;
+
+}
+
+.oculto img {
+  width: 115px;
+  margin-left: 5%;
+  margin-top: 10px;
+  float: left;
+  margin-right: 20px;
+
+}
+
+.oculto p {
+  /* font-size: 15px;
+  color: white;
+  width: 50%;
+  float: right;
+  margin-top: -30%;
+  margin-right: 4%;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:white;
+}
+
+.largo p{
+  font-size: 15px;
+  color: white;
+  width: 50%;
+  float: right;
+  margin-top: -30%;
+  margin-right: 4%;
+}
+.dentro{
+  background-color: orange;
+}
+
+/* Estilos animate ejemplo 1*/
+.busqueda{
+  background-color: green;
+  color: white;
+}
+.error {
+  background-color: red;
+  color: white;
+}
+/* Estilos animate ejemplo 2*/
+#contenedor{
+  width: 800px;
+  height: 500px;
+  margin: 0px auto;
+  position: relative;
+  border: 1px solid black;
+}
+
+#movil{
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 375px;
+  top: 225px;
+}
+
+#barra{
+  width: 400px;
+  background-color: green;
+  height:
+}
+
+/*Estilos examen 15/16*/
+#cont {
+  width: 800px;
+  margin: 10px auto;
+}
+
+.botones {
+    width: 150px;
+    float: left;
+    border-right: 1px solid black;
+}
+
+#superior {
+  float: right;
+  margin: 30px;
+}
+
+#inferior{
+  float: left;
+  clear: both;
+  /*margin-top: %;*/
+}
+
+.fila {
+  width: 680px;
+  margin: 10px 10px;
+  height: 100px;
+}
+input {
+  width: 130px;
+  margin: 5px;
+}
+
+#azul{
+  background-color: blue;
+}
+#verde{
+  background-color: green;
+}
+#rojo{
+  background-color: red;
+}
+
+.bloque{
+  width: 200px;
+  float: left;
+  height: 100px;
+  margin-left: 5px;
+}

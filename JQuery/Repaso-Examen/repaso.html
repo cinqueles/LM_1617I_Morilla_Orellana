@@ -1,0 +1,79 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery Ejemplos
+    Date: Marzo 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ismael</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="container">
+    <div id="superior">
+      <p>CONTROLES GENERALES</p>
+      <input type="button" value="Ocultar/Mostrar" id="visibilidad">
+      <input type="button" value="Resetear" id="resetear">
+    </div>
+    <div id="inferior">
+      <div class="fila">
+        <div class="botones">
+          <input type="button" value="Ocultar/mostrar" class="ocultar">
+          <input type="button" value="+50" class="aumentar">
+          <input type="button" value="-50" class="disminuir">
+        </div>
+        <div id="azul" class="bloque"></div>
+      </div>
+      <div class="fila">
+        <div class="botones">
+          <input type="button" value="Ocultar/mostrar" class="ocultar">
+          <input type="button" value="+50" class="aumentar">
+          <input type="button" value="-50" class="disminuir">
+        </div>
+        <div id="rojo" class="bloque"></div>
+      </div>
+      <div class="fila">
+        <div class="botones">
+          <input type="button" value="Ocultar/mostrar" class="ocultar">
+          <input type="button" value="+50" class="aumentar">
+          <input type="button" value="-50" class="disminuir">
+        </div>
+        <div id="verde" class="bloque"></div>
+      </div>
+  </div>
+</div>
+
+	<script>
+	  $(function() {
+      $(".ocultar").click(function(event){
+      	$(this).parent().next().toggle();
+      });
+      $("#resetear").click(function(){
+        	location.reload();
+        });
+      $("#visibilidad").click(function(event){
+            $(".bloque").toggle();
+      });
+
+      $(".aumentar").click(function(){
+        if ($(this).parent().next().width() <500) {
+          $(this).parent().next().animate({width: "+=50"},1000);
+        }
+      });
+      $(".disminuir").click(function(){
+        if ($(this).parent().next().width() >0) {
+          $(this).parent().next().animate({width: "-=50"},1000);
+        }
+      });
+
+	 });
+	</script>
+
+</body>
+</html>

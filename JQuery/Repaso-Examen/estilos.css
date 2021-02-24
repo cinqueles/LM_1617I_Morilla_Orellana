@@ -1,0 +1,48 @@
+#container {
+  width: 800px;
+  margin: 10px auto;
+}
+
+.botones {
+    width: 150px;
+    float: left;
+    border-right: 1px solid black;
+}
+
+#superior {
+  float: right;
+  margin: 30px;
+}
+
+#inferior{
+  float: left;
+  clear: both;
+  /*margin-top: %;*/
+}
+
+.fila {
+  width: 680px;
+  margin: 10px 10px;
+  height: 100px;
+}
+input {
+  width: 130px;
+  margin: 5px;
+}
+
+#azul{
+  background-color: blue;
+}
+#verde{
+  background-color: green;
+}
+#rojo{
+  background-color: red;
+}
+
+.bloque{
+  width: 200px;
+  float: left;
+  height: 100px;
+  margin-left: 5px;
+}
