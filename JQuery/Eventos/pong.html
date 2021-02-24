@@ -1,0 +1,130 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery eventos
+    Date: febrero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h4>X: a, Y:b</h4>
+	<div id="container">
+		<div id="j1">
+
+		</div>
+		<div id="j2">
+
+		</div>
+	</div>
+
+	<div id="menu">
+		<p>Opciones...</p>
+		<p>Reset</p>
+		<p>Ver a Isaac</p>
+		<p>Pegar a Ernesto</p>
+	</div>
+	<div id="foto">
+		<img src="photo.jpg">
+	</div>
+	<div id="foto2">
+		<img src="ernesto.jpg">
+	</div>
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+			$("#menu").hide();
+			$("#foto").hide();
+			$("#foto2").hide();
+			$("body").mousemove(function(event){
+				$("h4").text("X:"+event.pageX+" Y:"+event.pageY);
+			});
+			$("body").keypress(function(event){
+				var tecla = event.which;
+				console.log(tecla);
+				//Arriba s jugador izquierda
+				if (tecla == 119){
+					$("#j1").animate(
+						{top:"-=30px"
+						},200);
+				};
+				//Abajo x jugador izquierda
+				if (tecla == 115){
+					$("#j1").animate(
+						{top:"+=30px"
+						},200);
+				};
+				//Arriba i jugador derecha
+				if (tecla == 105){
+					$("#j2").animate(
+						{top:"-=30px"
+						},200);
+				};
+				//Abajo k jugador derecha
+				if (tecla == 107){
+					$("#j2").animate(
+						{top:"+=30px"
+						},200);
+				};
+
+			});
+			// Menu contextual con la rueda del ratón
+			/* mousedown enlaza un controlador de eventos*/
+			$("#container").mousedown(function(evento){
+				   /*tambien se puede utilizar .isDefaultPrevented
+					 no activa la accion predeterminada del evento
+					 */
+           evento.preventDefault;
+					 // .which indica que tecla estas pulsando
+						var raton = evento.which;
+						//var posicion = "X:"+event.pageX+" Y:"+event.pageY;
+						console.log(raton);
+            //console.log(event.offsetX);
+						if (raton == 2){
+							//console.log(posicion);
+							$("#menu").css({"left":event.pageX, "top": event.pageY}).show();
+						}
+						if (raton == 1) {
+							$("#menu").hide();
+							$("#foto").hide();
+							$("#foto2").hide();
+						}
+			 });
+
+			 //cuando pulse la opcion reset del menu conextual, se recargará la página
+			 $("#menu p:eq(1)").mousedown(function(menu){
+				 var raton = menu.which;
+				 if (raton == 1)
+				 //recarga la página
+				 	location.reload();
+			 });
+
+			 $("#menu p:eq(2)").mousedown(function(foto){
+				 var click = foto.which;
+				 if (click == 1)
+				 	$("#foto").show();
+					$("#menu").hide();
+					if ($("#foto2").show())
+						$("#foto2").hide();
+			 });
+			 $("#menu p:eq(3)").mousedown(function(foto){
+				 var click = foto.which;
+				 if (click == 1)
+				 	$("#foto2").show();
+					$("#menu").hide();
+					if ($("#foto").show())
+						$("#foto").hide();
+			 });
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery Ejemplos
+    Date: Enero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Galería de imagenes</h1>
+	<div id="container">
+		<div class="imagen">
+			<img src="1.jpg">
+		</div>
+		<div class="imagen">
+			<img src="2.jpg">
+		</div>
+		<div class="imagen">
+			<img src="3.jpg">
+		</div>
+		<div class="imagen">
+			<img src="4.jpg">
+		</div>
+		<div class="imagen">
+			<img src="5.jpg">
+		</div>
+		<div class="imagen">
+			<img src="6.jpg">
+		</div>
+		<div class="imagen">
+			<img src="7.jpg">
+		</div>
+</div>
+
+<div>
+	<div id="derecha">
+		<img src="derecha.png">
+	</div>
+	<div id="izq">
+		<img src="izq.png">
+	</div>
+</div>
+
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+		$("#container div:first-child").addClass("visible").animate({opacity:1},0);
+		$("#izq").hide();
+		$("#derecha").click(function(){
+			if ( $(".visible").next().length) {
+				$("#izq").show('slow');
+				$(".visible").removeClass("visible").animate({opacity:0},1000).next().addClass("visible").animate({opacity:1},1000);
+			}
+			else{
+				$("#derecha").hide('slow');
+			}
+		});
+
+		$("#izq").click(function(){
+			if ( $(".visible").prev().length) {
+				$(".visible").removeClass("visible").animate({opacity:0},1000).prev().addClass("visible").animate({opacity:1},1000);
+				$("#derecha").show('slow');
+			}
+			else{
+				$("#izq").hide('slow');
+			}
+		});
+
+
+	  });
+	</script>
+
+</body>
+</html>

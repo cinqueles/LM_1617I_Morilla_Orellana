@@ -1,0 +1,63 @@
+<!--
+    Author: Ismael Morilla
+    Description: jQuery eventos
+    Date: Enero 2017
+    Reference: http://api.jquery.com/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Template</title>
+	<!-- Loading jQUery Script -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link href="estilos.css" type="text/css" rel="stylesheet" >
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<h1>jQuery Teclas</h1>
+	<div id="container">
+		<div id="square">
+
+		</div>
+
+	</div>
+
+
+	<script>
+	  //Function executed when the HTML document is Ready (full loaded)
+	  $(function() {
+			$("body").keypress(function(event){
+				var tecla = event.which;
+				//Izquierda z
+				if (tecla == 122){
+					$("#square").animate(
+						{left:"-=10px"
+						},200);
+				};
+				//Arriba s
+				if (tecla == 115){
+					$("#square").animate(
+						{top:"-=10px"
+						},200);
+				};
+				//Abajo x
+				if (tecla == 120){
+					$("#square").animate(
+						{top:"+=10px"
+						},200);
+				};
+				//Derecha c
+				if (tecla == 99){
+					$("#square").animate(
+						{left:"+=10px"
+						},200);
+				};
+			});
+
+		});
+	</script>
+
+</body>
+</html>
